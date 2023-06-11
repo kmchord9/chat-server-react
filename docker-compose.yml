@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  chatserver:
+    build: ./compose/node
+    volumes:
+      - ./volume:/home/node/work
+    ports:
+      - "3000:3000"
+      - "8000:8000"
+    tty: true
